@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:lineitem="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/high"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/personal_background">
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_personal_setting"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            android:id="@+id/portrait"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/personal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below= "@id/portrait"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="WeaponZ_POI"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/personal_edit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_personal_edit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/personal_name"
+            android:layout_below="@id/portrait"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personal_name"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"
+            android:text="这家伙很懒，什么都没有留下"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/high"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.sina.weibo.sdk.demo.view.LineItem
+            android:id="@+id/personal_item_myweibo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            lineitem:midcontent="我的话题"
+            lineitem:rightimage="@drawable/ic_personal_more"
+            lineitem:lineShown="true"
+            >
+        </com.sina.weibo.sdk.demo.view.LineItem>
+
+        <com.sina.weibo.sdk.demo.view.LineItem
+            android:id="@+id/personal_item_mytopic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            lineitem:midcontent="我的主页"
+            lineitem:rightimage="@drawable/ic_personal_more"
+            lineitem:lineShown="false"
+            >
+
+        </com.sina.weibo.sdk.demo.view.LineItem>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/ic_personal_line"/>
+
+        <com.sina.weibo.sdk.demo.view.LineItem
+            android:id="@+id/personal_item_mycollection"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            lineitem:midcontent="收藏"
+            lineitem:rightimage="@drawable/ic_personal_more"
+            lineitem:lineShown="false"
+            >
+
+        </com.sina.weibo.sdk.demo.view.LineItem>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="@drawable/ic_personal_line"/>
+
+        <com.sina.weibo.sdk.demo.view.LineItem
+            android:id="@+id/personal_item_mytoken"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            lineitem:midcontent="收藏"
+            lineitem:rightimage="@drawable/ic_personal_more"
+            lineitem:lineShown="false"
+            >
+
+        </com.sina.weibo.sdk.demo.view.LineItem>
+    </LinearLayout>
+</RelativeLayout>
